@@ -8,6 +8,7 @@ export default function Form({ onSubmit }) {
   const [number, setNumber] = useState('');
 
   const nameInputId = shortid.generate();
+  const nameInputIdsec = shortid.generate();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -55,7 +56,7 @@ export default function Form({ onSubmit }) {
             id={nameInputId}
           />
         </LabelContact>
-        <LabelContact htmlFor={nameInputId}>
+        <LabelContact htmlFor={nameInputIdsec}>
           Number
           <FormInput
             type="tel"
@@ -65,7 +66,7 @@ export default function Form({ onSubmit }) {
             required
             value={number}
             onChange={handleChange}
-            id={nameInputId}
+            id={nameInputIdsec}
           />
         </LabelContact>
         <button type="Submit">Add contact</button>
